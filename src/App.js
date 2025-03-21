@@ -4,8 +4,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/dashboard";
-import About from "./pages/About"; // ✅ Import About Page
-import Contact from "./pages/Contact"; // ✅ Import Contact Page
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { AuthProvider, useAuth } from "./context/AuthContext";
@@ -13,7 +13,7 @@ import "./style.css";
 
 function App() {
   return (
-    <AuthProvider> {/* Ensure AuthProvider wraps the entire app */}
+    <AuthProvider> 
       <Router>
         <Header />
         <AppRoutes />
@@ -24,9 +24,9 @@ function App() {
 }
 
 function AppRoutes() {
-  const { user, loading } = useAuth(); // Get auth state from context
+  const { user, loading } = useAuth(); 
 
-  if (loading) return <p>Please wait...</p>; // Show loading screen while checking auth state
+  if (loading) return <p>Please wait...</p>;
 
   return (
     <Routes>
@@ -34,8 +34,8 @@ function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/login" />} />
-      <Route path="/about" element={<About />} /> {/* ✅ About Page */}
-      <Route path="/contact" element={<Contact />} /> {/* ✅ Contact Page */}
+      <Route path="/about" element={<About />} /> 
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 }

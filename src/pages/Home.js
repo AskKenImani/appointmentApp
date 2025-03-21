@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { getAuth, onAuthStateChanged } from "firebase/auth"; // Import Firebase auth
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 function Home() {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ function Home() {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
-    return () => unsubscribe(); // Cleanup function
+    return () => unsubscribe();
   }, []);
 
   return (
@@ -19,7 +19,6 @@ function Home() {
       <h2>Welcome to the Appointment Booking System</h2>
       <p>Book an appointment and get confirmation after payment.</p>
 
-      {/* Image Section */}
       <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
         <img 
           src="https://estheva.com/wp-content/uploads/2015/08/Spa_Booking_Online_Singapore.jpg" 
@@ -28,7 +27,6 @@ function Home() {
         />
       </div>
 
-      {/* Show buttons only if no user is logged in */}
       {!user && (
         <div style={{ marginTop: "20px" }}>
           <button

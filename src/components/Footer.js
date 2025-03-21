@@ -5,10 +5,10 @@ function Footer() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTime(new Date()); // Update state with current time
+      setTime(new Date());
     }, 1000);
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (

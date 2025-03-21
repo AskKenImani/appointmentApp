@@ -14,7 +14,6 @@ html {
     overflow-y: scroll;
 }
 
-/* Header */
 header {
     position: relative;
     display: flex;
@@ -26,7 +25,6 @@ header {
     color: white;
 }
 
-/* Navigation */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -52,7 +50,6 @@ nav a {
     }
 }
 
-/* Table */
 .table-container {
     width: 100%;
     overflow-x: auto;
@@ -90,13 +87,11 @@ table tr:nth-child(even) {
     }
 }
 
-/* Sections */
 section {
     padding: 40px;
     text-align: center;
 }
 
-/* Footer */
 footer {
     position: relative;
     width: 100%;
@@ -114,7 +109,6 @@ footer a {
     justify-content: center;
 }
 
-/* Forms */
 form {
     display: flex;
     flex-direction: column;
@@ -130,7 +124,6 @@ input, textarea {
     border-radius: 5px;
 }
 
-/* General Layout */
 .form-container, .dashboard, .home, .about {
     display: flex;
     flex-direction: column;
@@ -140,7 +133,6 @@ input, textarea {
     text-align: center;
 }
 
-/* Buttons */
 button {
     padding: 12px 20px;
     background: linear-gradient(135deg, #E63946, #1D3557);
@@ -155,7 +147,6 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Error Message */
 .error-message {
     color: red;
     font-size: 14px;

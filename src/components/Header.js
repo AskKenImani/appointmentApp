@@ -9,10 +9,10 @@ function Header() {
     const auth = getAuth();
 
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setIsAuthenticated(!!user); // Convert user object to boolean
+      setIsAuthenticated(!!user);
     });
 
-    return () => unsubscribe(); // Cleanup on unmount
+    return () => unsubscribe();
   }, []);
 
   const handleLogout = () => {

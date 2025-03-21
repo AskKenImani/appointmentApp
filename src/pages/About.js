@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 function About() {
-  const navigate = useNavigate(); // Added navigation function
+  const navigate = useNavigate(); 
 
   return (
     <div className="about" style={{ textAlign: "center", padding: "50px" }}>
@@ -46,7 +46,6 @@ function About() {
         style={{ width: "30%", borderRadius: "45px", margin: "20px 10px" }}
       />
 
-      {/* Back to Home Button */}
       <button
         onClick={() => navigate("/")}
         style={{

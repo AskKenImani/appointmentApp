@@ -20,7 +20,6 @@ const Dashboard = () => {
 
         const userRef = doc(db, "users", currentUser.uid);
 
-        // Listen for real-time role updates
         const unsubscribeRole = onSnapshot(userRef, (docSnap) => {
           if (docSnap.exists()) {
             const userData = docSnap.data();
@@ -37,7 +36,7 @@ const Dashboard = () => {
       }
     });
 
-    return () => unsubscribe(); // Cleanup listener on unmount
+    return () => unsubscribe(); 
   }, [navigate]);
 
   const handleLogout = async () => {
@@ -53,7 +52,6 @@ const Dashboard = () => {
           <h2>Welcome, {user.email} 👋</h2>
           <p><strong>Your Role:</strong> {role}</p>
 
-          {/* Render dashboard based on role */}
           {role === "admin" && <AdminPanel />}
           {role === "manager" && <ManagerPanel />}
           {role === "receptionist" && <ReceptionistPanel />}
