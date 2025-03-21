@@ -109,7 +109,7 @@ function UserPanel() {
       />
       <input
         type="text"
-        placeholder="Enter Room (Optional)"
+        placeholder="Enter Room No from 1 - 100 (Optional)"
         value={room}
         onChange={(e) => setRoom(e.target.value)}
       />
